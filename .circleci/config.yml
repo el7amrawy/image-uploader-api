@@ -30,6 +30,7 @@ jobs:
       - node/install:
           node-version: "16.16"
       - checkout
+      - heroku/install
       - run:
           name: configure git
           # TODO: Install, build, deploy in both apps
