@@ -13,7 +13,7 @@ app.get("/", (_req, res) => {
   res.send("sss");
 });
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   process.stdout.write(`server started at http://localhost:${port}\n`);
 });
