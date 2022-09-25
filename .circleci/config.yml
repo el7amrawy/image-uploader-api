@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@5.0.2
-  heroku: circleci/heroku@1.2.6
+  # heroku: circleci/heroku@1.2.6
 jobs:
   build:
     docker:
@@ -31,11 +31,11 @@ jobs:
           node-version: "16.16"
       - checkout
       # - heroku/install
-      - run:
-          name: configure git
-          # TODO: Install, build, deploy in both apps
-          command: |
-            git config user.email "ci-build@klukas.net" && git config user.name "ci-build"
+      # - run:
+      #     name: configure git
+      #     # TODO: Install, build, deploy in both apps
+      #     command: |
+      #       git config user.email "ci-build@klukas.net" && git config user.name "ci-build"
       # - run:
       #     name: configure heroku
       #     # TODO: Install, build, deploy in both apps
@@ -50,6 +50,14 @@ workflows:
   build and deploy:
     jobs:
       - build
-      - deploy:
+      - hold:
+          filters:
+            branches:
+              only:
+                - master
+          type: approval
           requires:
             - build
+      - deploy:
+          requires:
+            - hold
