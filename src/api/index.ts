@@ -16,7 +16,7 @@ routes.post("/upload", upload.any(), (req: Request, res: Response) => {
 });
 
 routes.all("*", (_req: Request, res: Response) => {
-  res.status(404).send("404 page not found");
+  res.status(404).send("<-- 404 page not found -->");
 });
 
 export default routes;
