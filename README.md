@@ -7,15 +7,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://github.com/el7amrawy/image-uploader" target="_blank">
+    <a href="https://github.com/el7amrawy/image-uploader" >
       Front-End
     </a>
     <span> | </span>
-    <a href="https://github.com/el7amrawy/image-processing-api" target="_blank">
+    <a href="https://github.com/el7amrawy/image-processing-api" >
       Back-End
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx" target="_blank">
+    <a href="https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx" >
       Challenge
     </a>
   </h3>
@@ -30,9 +30,10 @@
 - Express.JS
 
 ## Dependencies
-* express
-* cors
-* multer
+
+- express
+- cors
+- multer
 
 ## Contact
 
