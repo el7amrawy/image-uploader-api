@@ -11,7 +11,7 @@
       Front-End
     </a>
     <span> | </span>
-    <a href="https://github.com/el7amrawy/image-processing-api" >
+    <a href="https://github.com/el7amrawy/image-uploader-api" >
       Back-End
     </a>
     <span> | </span>
